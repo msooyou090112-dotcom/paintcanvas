@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디자인 창</title>
+    <link href="style.css" rel="stylesheet">
+    <!--<script src = "https://cdnjs.cloudflare.com/ajax/libs/fabric.js/700-beta1/index.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+
+    
+</head>
+<body>
+
+    <div class="canvas-wrapper">
+<canvas id="c" width="630" height="900"></canvas> <!--891:1260-->
+</div>
+
+<!--<input type ="file" accept="image/*" onchange="loadFile(this)">-->
+<input
+  type="file"
+  id="fileInput"
+  accept="image/*"
+  onchange="loadFile(this)"
+  hidden
+>
+
+<label for="fileInput" class="upload-btn">
+  내 이미지 업로드하기
+</label>
+
+
+<ul class="wrap">
+    <button type ="button" onclick="canvasplus();">+</button>
+    <button type ="button" onclick="canvasminus();">-</button>
+    <button type ="button" onclick="canvasReset();">기본 크기로 설정하기</button>
+</ul>
+
+    
+    <!--<div class="container">
+        <div class="imageupload" id="imageupload">
+       
+            <form method="post" enctype="multipart/form-data">
+              <div class="button">
+                <label for="chooseFile">이미지 업로드하기</label>
+              </div>
+              <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+             </form>
+
+
+        <div class="imageshow" id="imageshow"></div>
+        </div>-->
+
+<div class="shape">
+   <button type = "button" id ="rectangle" style="width:70px; height:70px;" onclick = rectangle()></button>
+   <button type = "button" id ="triangle"  style="width:70px; height:70px;" onclick = triangle()></button>
+   <button type = "button" id ="circle"    style="width:70px; height:70px;" onclick = circle()></circle></button>
+</div>
+    
+
+<img src="../js/images/pointer.png" class="cr" id="cr" ></img>   <!--cursor-->
+
+<div class="color-picker" style="position:absolute; top:10px; left:950px; display:flex; gap:5px;">
+    <button style="background-color:#4a90e2; width:30px; height:30px;" onclick="changeColor('#4a90e2')"></button>
+    <button style="background-color:#50e3c2; width:30px; height:30px;" onclick="changeColor('#50e3c2')"></button>
+    <button style="background-color:#f5a623; width:30px; height:30px;" onclick="changeColor('#f5a623')"></button>
+    <input type="color" id="customColor" onchange="changeColor(this.value)">
+</div>
+
+
+<div class="text-tools">
+    <button onclick="addText()">텍스트 추가하기</button>
+    
+</div>
+<label for="text-tools" onclick="addText()" class="text-tools">
+  텍스트 추가하기
+</label>
+
+<button type = "button" id="saveimage" onclick="saveCanvas()">포스터 저장하기</button>
+
+</body>
+
+<script src="index.js"></script>
+
+</html>

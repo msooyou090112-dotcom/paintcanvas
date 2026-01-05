@@ -1,0 +1,222 @@
+
+
+li {
+    list-style: none;
+}
+body {
+    background-color: #384047;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    height: 200%;
+    
+
+}
+
+
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.imageupload {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.button {
+    display: flex;
+    justify-content: center;
+}
+label {
+    cursor: pointer;
+    font-size: 1.5em;
+    background-color: aquamarine;
+    position: absolute;
+    right: 1300px;
+    top:300px;
+
+}
+
+#chooseFile {
+    visibility: hidden;
+    
+}
+
+.imageshow {                            /*추가한 이미지 속성*/
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left:1000px;
+}
+
+.img {                             /*이미지 속성*/
+    position: absolute;
+    
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+}
+
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {                             /*링크 속성*/
+    text-decoration: none;
+    color: #000;
+}
+
+.wrap {                         /*캔버스 크기 조정하는 버튼 */
+    display: flex;
+    gap:8px;
+    width:100%;
+}
+
+.wrap li {                     
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid #000;
+
+}
+
+.shape {                        /*도형 버튼들 공통 설정*/
+    display: flex;
+    gap:8px;
+    width: 50px;
+}
+
+#rectangle {
+    background-image: url(../js/images/rectangle.png);
+    background-size: cover; 
+    background-position: center;
+    padding: 10px;
+    object-fit: cover;
+    left: 1350px;
+    top:200px;
+    cursor: pointer;
+    position:absolute;
+    
+}
+
+#triangle {
+    background-image: url(../js/images/triangle.png);
+    background-size: cover; 
+    background-position: center;
+    padding: 10px;
+    object-fit: cover;
+    left: 1250px;
+    top:200px;
+    cursor: pointer;
+    position:absolute;
+}
+
+#circle {
+    background-image: url(../js/images/circle.png);
+    background-size: cover; 
+    background-position: center;
+    padding: 10px;
+    object-fit: cover;
+    left: 1150px;
+    top: 200px;
+    cursor: pointer;
+    position:absolute;
+}
+
+.cr{                              /*커서*/
+    width: 40px; 
+    height: 40px;
+    z-index: 50;
+    background-image: url(../js/images/pointer.png);
+    position:absolute;
+    cursor: none;
+}
+
+
+#c {
+    background-color: white;
+    position: absolute;
+    z-index: -2;
+    
+}
+
+  
+
+.canvas-wrapper{
+    margin-left: 250px;
+    
+}
+
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  top: 300px;
+  left: 10px;
+
+  padding: 12px 18px;
+  background: aquamarine;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.upload-btn:hover {
+  background: aqua;
+}
+
+.upload-btn:active {
+  transform: scale(0.97);
+}
+
+#saveimage{
+    background-size: cover; 
+    background-position: center;
+    padding: 10px;
+    left: 60px;
+    top: 250px;
+    cursor: pointer;
+    position:absolute;
+    background-color: yellow;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.text-tools {
+    padding: 10px;
+    left: 1150px;
+    top: 325px;
+    width:135px;
+    cursor: pointer;
+    position:absolute;
+    background-color: green;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.text-tools button {
+    visibility:hidden;
+}
